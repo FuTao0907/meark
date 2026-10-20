@@ -1,242 +1,183 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meark · 个人档案</title>
-  <meta name="description" content="一位前端开发者正在整理的自我档案：会什么、做过什么、喜欢什么。">
-  <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- 占位 favicon：可替换为你的图标 -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1c1c'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' fill='%238fa68e' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meark · 个人档案</title>
+<meta name="description" content="Meark 的个人档案：做过什么、做到什么程度，按时间顺序排在这里。">
+<link rel="preload" href="assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="js">
+
+<!-- ================= HERO · 顶部文字带 + 联系单 ================= -->
+<header class="site-top" id="top">
+  <div class="grid-12">
+    <h1 class="site-top__name">Meark</h1>
+    <p class="site-top__line">前端开发者，正在把做过的一切收进一只方舟。</p>
+    <ul class="site-top__services" aria-label="能做什么">
+      <li>前端开发</li>
+      <li>静态网站</li>
+      <li>文档与整理</li>
+      <li>自建服务</li>
+    </ul>
+    <nav class="site-top__nav" aria-label="站内导航">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#tastes">Tastes</a>
+    </nav>
+    <p class="site-top__contact"><a href="mailto:hi@meark.cn">hi@meark.cn</a></p>
+  </div>
+</header>
+
+<!-- ================= SHEET · 首屏联系单：按时间排开的展品 ================= -->
+<section class="sheet" aria-label="展品一览">
+  <div class="sheet__row">
+    <!-- 占位展品流：上线前替换成你自己的作品/照片，标题随图改 -->
+    <figure class="sheet__item" data-drift="0.03"><figcaption>书</figcaption><img src="assets/img/obj-24.jpg" alt="翻开的书" width="1600" height="1000" loading="lazy"></figure>
+    <figure class="sheet__item" data-drift="0.03"><figcaption>雾海</figcaption><img src="assets/img/img-338.jpg" alt="海雾中的人影" width="1200" height="1500" loading="lazy"></figure>
+    <figure class="sheet__item" data-drift="0.03"><figcaption>唱机</figcaption><img src="assets/img/obj-39.jpg" alt="唱机唱臂" width="1600" height="1000" loading="lazy"></figure>
+    <figure class="sheet__item" data-drift="0.03"><figcaption>湖山</figcaption><img src="assets/img/img-473.jpg" alt="码头与远山" width="1200" height="1500" loading="lazy"></figure>
+    <figure class="sheet__item" data-drift="0.03"><figcaption>打字机</figcaption><img src="assets/img/obj-486.jpg" alt="老式打字机" width="1600" height="1000" loading="lazy"></figure>
+    <figure class="sheet__item" data-drift="0.03"><figcaption>暮色</figcaption><img src="assets/img/img-1005.jpg" alt="黄昏看海的人" width="1200" height="1500" loading="lazy"></figure>
+    <figure class="sheet__item" data-drift="0.03"><figcaption>望远镜</figcaption><img src="assets/img/obj-687.jpg" alt="投币望远镜" width="1600" height="1000" loading="lazy"></figure>
+    <figure class="sheet__item" data-drift="0.03"><figcaption>云海</figcaption><img src="assets/img/img-685.jpg" alt="云海上的人" width="1200" height="1500" loading="lazy"></figure>
+  </div>
+</section>
 
 <main>
 
-  <!-- ============ HERO · 暗房入口 ============ -->
-  <section class="hero" id="top">
-    <div class="hero__top">
-      <!-- 名字：占位，可替换为你的真名或昵称 -->
-      <p class="hero__name">Meark</p>
-      <nav class="hero__nav" aria-label="站内导航">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#tastes">Tastes</a>
-      </nav>
-    </div>
-
-    <!-- 展品条：横向拖动，中心帧点亮（签名动作） -->
-    <div class="strip" tabindex="0" role="region" aria-label="可横向拖动的展品条">
-      <figure class="strip__frame"><img src="assets/img/img-338.jpg" alt="海雾中的人影" width="1200" height="1500"><figcaption>雾海</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-473.jpg" alt="码头与远山" width="1200" height="1500"><figcaption>湖山</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-1005.jpg" alt="黄昏看海的人" width="1200" height="1500"><figcaption>暮色</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-685.jpg" alt="云海上的人" width="1200" height="1500"><figcaption>云海</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-91.jpg" alt="手持相机的人" width="1200" height="1500"><figcaption>相机</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-375.jpg" alt="黄昏的花田" width="1200" height="1500"><figcaption>花田</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-338.jpg" alt="海雾中的人影" width="1200" height="1500" loading="lazy"><figcaption>雾海</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-473.jpg" alt="码头与远山" width="1200" height="1500" loading="lazy"><figcaption>湖山</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-1005.jpg" alt="黄昏看海的人" width="1200" height="1500" loading="lazy"><figcaption>暮色</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-685.jpg" alt="云海上的人" width="1200" height="1500" loading="lazy"><figcaption>云海</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-91.jpg" alt="手持相机的人" width="1200" height="1500" loading="lazy"><figcaption>相机</figcaption></figure>
-      <figure class="strip__frame"><img src="assets/img/img-375.jpg" alt="黄昏的花田" width="1200" height="1500" loading="lazy"><figcaption>花田</figcaption></figure>
-    </div>
-
-    <div class="hero__bottom">
-      <!-- 一句话定位：待你确认 -->
-      <p class="hero__line">前端开发者，正在把做过的一切收进一只方舟。</p>
-      <!-- 主按钮：邮箱为占位，换成你的真实邮箱 -->
-      <a class="hero__action" href="mailto:hi@meark.cn">联系我</a>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT · 钉住标题 + 展品经过 ============ -->
-  <section class="about" id="about">
-    <div class="about__pin">
-      <h2 class="about__title">About<br>me</h2>
-    </div>
-    <div class="about__pass">
-      <!-- 以下 5 条为占位内容：每张图后按“主句 / 副行 / 说明”替换成你的真实经历 -->
-      <figure class="reveal">
-        <img src="assets/img/img-338.jpg" alt="雾海" loading="lazy">
-        <figcaption>
-          <span class="pass-main">唐山长大</span>
-          <span class="pass-role">出生与成长</span>
-          <span class="pass-note">北方小城，习惯把东西收拾整齐、把话说明白。</span>
-        </figcaption>
-      </figure>
-      <figure class="reveal">
-        <img src="assets/img/img-473.jpg" alt="湖山" loading="lazy">
-        <figcaption>
-          <span class="pass-main">一年前端</span>
-          <span class="pass-role">2024 - 2025</span>
-          <span class="pass-note">从第一个 HTML 页面，到能独立交付业务页面与组件。</span>
-        </figcaption>
-      </figure>
-      <figure class="reveal">
-        <img src="assets/img/img-1005.jpg" alt="暮色" loading="lazy">
-        <figcaption>
-          <span class="pass-main">正在转行</span>
-          <span class="pass-role">2025 -</span>
-          <span class="pass-note">行政、人事、文书方向：想把“会写、会整理”用在工作上。</span>
-        </figcaption>
-      </figure>
-      <figure class="reveal">
-        <img src="assets/img/img-685.jpg" alt="云海" width="1200" height="1500" loading="lazy">
-        <figcaption>
-          <span class="pass-main">base 北京</span>
-          <span class="pass-role">求职意向</span>
-          <span class="pass-note">想找一份行政 / 人事 / 文书方向的稳定工作。</span>
-        </figcaption>
-      </figure>
-      <!-- 原第 4、5 条（喜欢收藏 / base 北京）已并入 Tastes 与 Contact，避免钉住标题过久 -->
-    </div>
-  </section>
-
-  <!-- ============ SKILLS · 能力清单：会什么，到什么程度 ============ -->
-  <section class="skills" id="skills">
-    <h2 class="skills__title reveal">Skills</h2>
-    <ul class="skills__list">
-      <!-- 占位能力清单：替换为你真实的技能与程度描述 -->
-      <li class="skills__row reveal">
-        <span class="skills__name">HTML / CSS</span>
-        <span class="skills__level">日常主力：响应式、动效、语义化，写过官网与活动页。</span>
-      </li>
-      <li class="skills__row reveal">
-        <span class="skills__name">JavaScript</span>
-        <span class="skills__level">一年实战：组件、交互、数据请求，能独立完成页面功能。</span>
-      </li>
-      <li class="skills__row reveal">
-        <span class="skills__name">Vue / React</span>
-        <span class="skills__level">参与过业务组件开发与维护，熟悉常用生态。</span>
-      </li>
-      <li class="skills__row reveal">
-        <span class="skills__name">Git / 协作</span>
-        <span class="skills__level">提交、分支、Code Review 常规流程没问题。</span>
-      </li>
-      <li class="skills__row reveal">
-        <span class="skills__name">写作与整理</span>
-        <span class="skills__level">正在转向文书方向：把需求、信息、流程理清楚。</span>
-      </li>
-      <li class="skills__row reveal">
-        <span class="skills__name">工具与折腾</span>
-        <span class="skills__level">域名、静态站、Cloudflare、NAS 规划，喜欢自己动手。</span>
-      </li>
+<!-- ================= ABOUT · 侧边事实 + 宽段落 + 记录 ================= -->
+<section class="about" id="about">
+  <div class="about__row1">
+    <dl class="about__facts">
+      <!-- 占位：换成你的真实背景 -->
+      <div><dt>出身</dt><dd>唐山</dd></div>
+      <div><dt>前端</dt><dd>一年</dd></div>
+      <div><dt>状态</dt><dd>转行中</dd></div>
+    </dl>
+    <p class="about__para">唐山长大，北方小城，习惯把东西收拾整齐、把话说明白。做过一年前端：从第一个 HTML 页面，到能独立交付业务页面与组件。正在转向行政、人事、文书方向，想把会写、会整理用在工作上。这个站不是简历，是一间展室——做过什么、做到什么程度，按时间摆在这里。</p>
+  </div>
+  <div class="about__row2">
+    <!-- 占位：两列记录，替换成你的真实经历与计划 -->
+    <ul class="about__list"><span class="about__list-label">做过</span>
+      <li>前端开发 <span>2024–2025</span></li>
+      <li>业务页面交付 <span>2025</span></li>
+      <li>静态档案站 <span>2025</span></li>
     </ul>
-  </section>
+    <ul class="about__list"><span class="about__list-label">在折腾</span>
+      <li>域名与 DNS <span>2025</span></li>
+      <li>NAS 自建 <span>规划中</span></li>
+      <li>音乐播放器 <span>规划中</span></li>
+    </ul>
+    <figure class="about__feature">
+      <img src="assets/img/img-338.jpg" alt="雾海（放大帧）" width="1200" height="1500" loading="lazy">
+      <figcaption>雾海 · 一件被照亮的展品</figcaption>
+    </figure>
+  </div>
+</section>
 
-  <!-- ============ WORK · 做过什么：大名字索引 + 固定预览 ============ -->
-  <section class="work" id="work">
-    <div class="work__head">
-      <h2 class="work__title reveal">Work</h2>
-      <p class="work__hint">悬停或聚焦项目名，右侧预览会切换</p>
-    </div>
-    <div class="work__body">
-      <div class="work__list">
-        <!-- 占位项目：替换为你真实的经历与时间，成果描述不要虚构数字 -->
-        <div class="work__item reveal">
-          <img class="work-mobile" src="assets/img/img-375.jpg" alt="示意：项目一" loading="lazy">
-          <div class="work__index">
-            <a href="#work" data-img="img-375.jpg" class="is-active" aria-current="true">
-              <span>公司官网重构</span><small>前端 · 2025</small>
-            </a>
-          </div>
-        </div>
-      <div class="work__item reveal">
-        <img class="work-mobile" src="assets/img/img-338.jpg" alt="示意：项目二" loading="lazy">
-        <div class="work__index">
-          <a href="#work" data-img="img-338.jpg">
-            <span>后台数据看板</span><small>前端 · 2025</small>
-          </a>
-        </div>
-      </div>
-      <div class="work__item reveal">
-        <img class="work-mobile" src="assets/img/img-473.jpg" alt="示意：项目三" loading="lazy">
-        <div class="work__index">
-          <a href="#work" data-img="img-473.jpg">
-            <span>移动端 H5 活动页</span><small>前端 · 2024</small>
-          </a>
-        </div>
-      </div>
-      <div class="work__item reveal">
-        <img class="work-mobile" src="assets/img/img-1005.jpg" alt="示意：项目四" loading="lazy">
-        <div class="work__index">
-          <a href="#work" data-img="img-1005.jpg">
-            <span>个人博客</span><small>独立开发 · 2024</small>
-          </a>
-        </div>
-      </div>
-      <div class="work__item reveal">
-        <img class="work-mobile" src="assets/img/img-685.jpg" alt="示意：项目五" loading="lazy">
-        <div class="work__index">
-          <a href="#work" data-img="img-685.jpg">
-            <span>第一个静态站</span><small>独立开发 · 2024</small>
-          </a>
-        </div>
-      </div>
-      <div class="work__item reveal">
-        <img class="work-mobile" src="assets/img/img-91.jpg" alt="示意：项目六" loading="lazy">
-        <div class="work__index">
-          <a href="#work" data-img="img-91.jpg">
-            <span>个人档案站</span><small>独立开发 · 2025</small>
-          </a>
-        </div>
-      </div>
-      </div><!-- /work__list -->
+<!-- ================= SKILLS · 两端口行清单 ================= -->
+<section class="skills" id="skills">
+  <h2 class="skills__title">Skills</h2>
+  <div class="skills__list">
+    <!-- 占位能力清单：名字在左，程度在右 -->
+    <p class="skills__group">前端</p>
+    <div class="skills__row"><span class="skills__dot" aria-hidden="true"></span><span class="skills__name">HTML / CSS</span><span class="skills__value">日常主力</span></div>
+    <div class="skills__row"><span class="skills__dot" aria-hidden="true"></span><span class="skills__name">JavaScript</span><span class="skills__value">一年实战</span></div>
+    <div class="skills__row"><span class="skills__dot" aria-hidden="true"></span><span class="skills__name">Vue / React</span><span class="skills__value">业务组件</span></div>
+    <div class="skills__row"><span class="skills__dot" aria-hidden="true"></span><span class="skills__name">Git 协作</span><span class="skills__value">常规流程</span></div>
+    <p class="skills__group">在转</p>
+    <div class="skills__row"><span class="skills__dot" aria-hidden="true"></span><span class="skills__name">写作与整理</span><span class="skills__value">文书方向</span></div>
+    <div class="skills__row"><span class="skills__dot" aria-hidden="true"></span><span class="skills__name">工具与折腾</span><span class="skills__value">自己动手</span></div>
+  </div>
+</section>
 
-      <div class="work__preview" aria-hidden="true">
-        <img src="assets/img/img-375.jpg" alt="" class="is-visible">
-        <img src="assets/img/img-338.jpg" alt="">
-        <img src="assets/img/img-473.jpg" alt="">
-        <img src="assets/img/img-1005.jpg" alt="">
-        <img src="assets/img/img-685.jpg" alt="">
-        <img src="assets/img/img-91.jpg" alt="">
-      </div>
+<!-- ================= WORK · 书脊索引 ================= -->
+<section class="work" id="work">
+  <div class="work__head">
+    <h2 class="work__title">Work</h2>
+    <p class="work__note">悬停或聚焦项目名，右侧预览会切换。</p>
+  </div>
+  <div class="work__body">
+    <ul class="work__spines" aria-label="项目索引">
+      <!-- 占位项目：书名+方向（discipline 决定色块），替换成你的真实项目 -->
+      <li class="spine" data-preview="assets/img/obj-486.jpg" data-disc="前端"><a href="#work"><span class="spine__name">公司官网重构</span><span class="spine__disc">前端</span></a></li>
+      <li class="spine" data-preview="assets/img/obj-24.jpg" data-disc="前端"><a href="#work"><span class="spine__name">后台数据看板</span><span class="spine__disc">前端</span></a></li>
+      <li class="spine" data-preview="assets/img/obj-39.jpg" data-disc="前端"><a href="#work"><span class="spine__name">移动端 H5 活动页</span><span class="spine__disc">前端</span></a></li>
+      <li class="spine" data-preview="assets/img/obj-687.jpg" data-disc="独立"><a href="#work"><span class="spine__name">个人博客</span><span class="spine__disc">独立开发</span></a></li>
+      <li class="spine" data-preview="assets/img/obj-535.jpg" data-disc="独立"><a href="#work"><span class="spine__name">第一个静态站</span><span class="spine__disc">独立开发</span></a></li>
+      <li class="spine" data-preview="assets/img/obj-63.jpg" data-disc="独立"><a href="#work"><span class="spine__name">个人档案站</span><span class="spine__disc">独立开发</span></a></li>
+    </ul>
+    <div class="work__preview" aria-hidden="true" data-drift="-0.03">
+      <img src="assets/img/obj-486.jpg" alt="" width="1600" height="1000">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ TASTES · 爱好收藏：全屏序列 ============ -->
-  <section class="tastes" id="tastes">
-    <!-- 压在第一章图上的段落 -->
-    <p class="tastes__note">这一页不是简历，是一间展室：把会的东西、做过的事、喜欢的东西，一件件摆出来。</p>
+<!-- ================= TASTES · 密集贴片（爱好） ================= -->
+<section class="gallery" id="tastes">
+  <p class="gallery__stmt">这一页不是简历，是一间展室。把会的东西、做过的事、喜欢的东西，一件件摆出来。</p>
+  <figure class="gallery__feature" data-drift="-0.04">
+    <img src="assets/img/obj-80.jpg" alt="松果" width="1600" height="1000" loading="lazy">
+    <figcaption>松果, 物件</figcaption>
+  </figure>
+  <div class="gallery__sheet">
+    <!-- 占位贴片：6 张人物氛围图 + 8 张物件图，上线前替换成你自己的照片 -->
+    <figure data-drift="0.025"><img src="assets/img/img-338.jpg" alt="雾海" width="1200" height="1500" loading="lazy"><figcaption>雾海, 摄影</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/obj-63.jpg" alt="咖啡" width="1600" height="1000" loading="lazy"><figcaption>咖啡, 物件</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/img-473.jpg" alt="湖山" width="1200" height="1500" loading="lazy"><figcaption>湖山, 摄影</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/obj-486.jpg" alt="打字机" width="1600" height="1000" loading="lazy"><figcaption>打字机, 物件</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/img-1005.jpg" alt="暮色" width="1200" height="1500" loading="lazy"><figcaption>暮色, 摄影</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/obj-535.jpg" alt="衬衫" width="1600" height="1000" loading="lazy"><figcaption>衬衫, 物件</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/img-685.jpg" alt="云海" width="1200" height="1500" loading="lazy"><figcaption>云海, 摄影</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/obj-687.jpg" alt="望远镜" width="1600" height="1000" loading="lazy"><figcaption>望远镜, 物件</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/img-91.jpg" alt="相机" width="1200" height="1500" loading="lazy"><figcaption>相机, 摄影</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/obj-24.jpg" alt="书" width="1600" height="1000" loading="lazy"><figcaption>书, 物件</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/img-375.jpg" alt="花田" width="1200" height="1500" loading="lazy"><figcaption>花田, 摄影</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/obj-39.jpg" alt="唱机" width="1600" height="1000" loading="lazy"><figcaption>唱机, 物件</figcaption></figure>
+    <figure data-drift="0.025"><img src="assets/img/obj-23.jpg" alt="叉子" width="1600" height="1000" loading="lazy"><figcaption>叉子, 物件</figcaption></figure>
+  </div>
+</section>
 
-    <div class="tastes__wrap">
-      <div class="tastes__slide">
-        <img src="assets/img/img-685.jpg" alt="云海" loading="lazy">
-        <p class="caption">音乐：攒了很多歌，准备做自己的播放器。</p>
-      </div>
+<!-- ================= CONTACT · 照片条 + 三格条 ================= -->
+<section class="contact" id="contact">
+  <div class="contact__strip" aria-hidden="true">
+    <div class="contact__strip-inner">
+      <!-- 占位：图片为 Unsplash（via picsum）氛围占位图 -->
+      <img src="assets/img/img-338.jpg" alt="" width="1200" height="1500" loading="lazy">
+      <img src="assets/img/obj-24.jpg" alt="" width="1600" height="1000" loading="lazy">
+      <img src="assets/img/img-473.jpg" alt="" width="1200" height="1500" loading="lazy">
+      <img src="assets/img/obj-39.jpg" alt="" width="1600" height="1000" loading="lazy">
+      <img src="assets/img/img-1005.jpg" alt="" width="1200" height="1500" loading="lazy">
+      <img src="assets/img/obj-486.jpg" alt="" width="1600" height="1000" loading="lazy">
+      <img src="assets/img/img-685.jpg" alt="" width="1200" height="1500" loading="lazy">
+      <img src="assets/img/obj-687.jpg" alt="" width="1600" height="1000" loading="lazy">
+      <img src="assets/img/img-91.jpg" alt="" width="1200" height="1500" loading="lazy">
+      <img src="assets/img/obj-535.jpg" alt="" width="1600" height="1000" loading="lazy">
+      <img src="assets/img/img-375.jpg" alt="" width="1200" height="1500" loading="lazy">
+      <img src="assets/img/obj-63.jpg" alt="" width="1600" height="1000" loading="lazy">
+      <img src="assets/img/obj-23.jpg" alt="" width="1600" height="1000" loading="lazy">
+      <img src="assets/img/obj-80.jpg" alt="" width="1600" height="1000" loading="lazy">
     </div>
-    <div class="tastes__wrap">
-      <div class="tastes__slide">
-        <img src="assets/img/img-375.jpg" alt="花田" loading="lazy">
-        <p class="caption">视频：收藏夹里存着喜欢的片子和剪辑。</p>
-      </div>
-    </div>
-    <div class="tastes__wrap">
-      <div class="tastes__slide">
-        <img src="assets/img/img-91.jpg" alt="相机" loading="lazy">
-        <p class="caption">技术：域名、静态站、自建服务，喜欢自己折腾。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT · 邮箱大字 ============ -->
-  <footer class="contact" id="contact">
-    <p class="contact__credit">摄影：Unsplash via picsum（氛围占位图，上线前可替换）</p>
-    <p class="contact__ask reveal">想聊聊工作，或推荐一首歌。</p>
-    <!-- 邮箱占位：换成你的真实邮箱 -->
-    <a class="contact__mail reveal" href="mailto:hi@meark.cn">hi@meark.cn</a>
-    <div class="contact__meta reveal">
-      <p style="margin:0">唐山 · 北京（求职中）</p>
-      <nav class="contact__links" aria-label="社交链接">
-        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:hi@meark.cn">邮箱</a>
-      </nav>
-    </div>
-  </footer>
+  </div>
+  <h2 class="contact__title" data-drift="0.02">想聊聊工作，或推荐一首歌。</h2>
+  <div class="contact__bar">
+    <!-- 占位邮箱：换成你的真实邮箱 -->
+    <a class="contact__cell" href="mailto:hi@meark.cn">hi@meark.cn</a>
+    <a class="contact__cell" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    <a class="contact__cell contact__cell-action" href="mailto:hi@meark.cn?subject=想聊聊工作">发邮件</a>
+  </div>
+  <p class="contact__note">唐山 · 北京（求职中）· 平时回复很快</p>
+</section>
 
 </main>
+
+<footer class="site-foot">
+  <p>© 2025 Meark · 图片为 Unsplash（via picsum）氛围占位图，上线前可替换。</p>
+</footer>
 
 <script src="assets/js/main.js"></script>
 </body>
