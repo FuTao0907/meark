@@ -94,18 +94,13 @@ main { max-width: 980px; margin: 0 auto; padding: 0 var(--margin) 40px; }
   flex: none;
 }
 .who__name { font-size: 30px; font-weight: 700; letter-spacing: 0.02em; }
-.who__lv {
-  display: inline-block;
-  margin-top: 8px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 2px 12px;
-  border-radius: 5px;
+.who__intro {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--ink);
+  max-width: 34ch;
+  line-height: 1.6;
 }
-.who__status { margin-top: 12px; font-size: 14px; color: var(--muted); }
-.who__status b { color: var(--ink); font-weight: 600; }
 .who__btn {
   display: inline-block;
   margin-top: 16px;
