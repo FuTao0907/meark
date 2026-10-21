@@ -4,174 +4,119 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meark · 系统面板</title>
-  <meta name="description" content="Meark 的个人系统面板：技能、状态、任务记录、收藏，全部摊开在这里。">
+  <meta name="description" content="Meark 的个人系统面板：状态、技能、经历、爱好。">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="js">
+<div class="topbar" data-ui>
+  <b class="topbar__brand">MEARK · 系统面板</b>
+  <div class="topbar__right"><span class="topbar__ver">v2.0 · 2025</span><span class="badge">求职中 · 北京</span></div>
+</div>
+
 <main>
 
-  <!-- ================= HERO · 名字纪念碑 + 瓦片轨道 ================= -->
-  <section class="hero" id="top">
-    <div class="hero__band"><h1 class="hero__name">MEARK</h1></div>
-    <nav class="hero__links" aria-label="页面导航">
-      <a href="#about">档案</a>
-      <a href="#skills">技能</a>
-      <a href="#work">任务</a>
-      <a href="#gallery">收藏</a>
-      <a href="#contact">联系</a>
-    </nav>
-    <div class="hero__rails">
-      <div class="rail-left">
-        <figure class="rail-left__photo"><img src="assets/img/img-338.jpg" alt="海边，想看一次海"></figure>
-        <ul class="rail-left__facts">
-          <li><span class="rail-fact__value">求职中</span><span class="rail-fact__label">状态</span></li>
-          <li><span class="rail-fact__value">前端 1 年</span><span class="rail-fact__label">经验</span></li>
-          <li><span class="rail-fact__value">河北 · 唐山</span><span class="rail-fact__label">坐标</span></li>
-          <li><span class="rail-fact__value">北京</span><span class="rail-fact__label">意向城市</span></li>
-          <li><span class="rail-fact__value">行政 / 人事 / 文书</span><span class="rail-fact__label">方向</span></li>
-        </ul>
-      </div>
-      <div class="rail-main">
-        <div class="rail-main__panel">
-          <p class="rail-main__kicker">系统面板 v2.0</p>
-          <p class="rail-main__lead">做过的事、会的东西、喜欢的，都收进这一块面板。</p>
-          <dl class="rail-main__stats">
-            <div><dt>模块</dt><dd>状态 · 技能 · 任务 · 收藏</dd></div>
-            <div><dt>状态</dt><dd>求职中 · 北京</dd></div>
-            <div><dt>更新</dt><dd>2025 · 持续维护</dd></div>
-          </dl>
+  <!-- ============ 角色面板卡 ============ -->
+  <section class="hero-card" id="top">
+    <div class="hero-card__head">
+      <div class="hero-card__left">
+        <div class="avatar" aria-hidden="true">M</div>
+        <div class="who">
+          <h1 class="who__name">Meark</h1>
+          <span class="who__lv">Lv.1 · 前端开发</span>
+          <p class="who__status">求职 <b>行政 / 人事 / 文书</b> 方向 · 坐标 河北 · 唐山</p>
+          <a class="who__btn" href="mailto:hi@meark.cn">联系我</a>
         </div>
       </div>
-      <aside class="rail-side">
-        <span class="tile rail-side__fact">前端开发者<br>正转向行政人事文书</span>
-        <span class="tile rail-side__fact">唐山长大<br>北方小城</span>
-        <span class="tile rail-side__fact">把话说明白<br>把事做整齐</span>
-        <span class="tile rail-side__fact">2024–2025<br>一年实战</span>
-        <a class="tile tile--accent" href="mailto:hi@meark.cn">联系我<br>hi@meark.cn</a>
-      </aside>
+      <figure class="hero-card__photo"><img src="assets/img/img-338.jpg" alt="海边，想看一次海"></figure>
+    </div>
+    <dl class="hero-card__stats" data-ui>
+      <div><dt>经验</dt><dd>1<small>年</small></dd></div>
+      <div><dt>技能</dt><dd>10<small>项</small></dd></div>
+      <div><dt>经历</dt><dd>3<small>段</small></dd></div>
+      <div><dt>坐标</dt><dd>唐山</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ 技能 ============ -->
+  <section class="block" id="skills">
+    <div class="block__head">
+      <h2>技能</h2>
+      <p class="block__note">熟练度为自评，定期校准。</p>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>前端开发</h3>
+        <div class="skill-row"><div class="skill-row__t"><span>HTML / CSS</span><b>75</b></div><div class="bar"><i style="width:75%"></i></div></div>
+        <div class="skill-row"><div class="skill-row__t"><span>JavaScript</span><b>65</b></div><div class="bar"><i style="width:65%"></i></div></div>
+        <div class="skill-row"><div class="skill-row__t"><span>Vue / React</span><b>55</b></div><div class="bar"><i style="width:55%"></i></div></div>
+        <div class="skill-row"><div class="skill-row__t"><span>Git 协作</span><b>60</b></div><div class="bar"><i style="width:60%"></i></div></div>
+      </div>
+      <div class="skill-group">
+        <h3>行政 · 人事 · 文书</h3>
+        <div class="skill-row"><div class="skill-row__t"><span>公文与写作</span><b>45</b></div><div class="bar"><i style="width:45%"></i></div></div>
+        <div class="skill-row"><div class="skill-row__t"><span>文档整理</span><b>70</b></div><div class="bar"><i style="width:70%"></i></div></div>
+        <div class="skill-row"><div class="skill-row__t"><span>表格与数据</span><b>60</b></div><div class="bar"><i style="width:60%"></i></div></div>
+      </div>
+      <div class="skill-group">
+        <h3>工具与折腾</h3>
+        <div class="skill-row"><div class="skill-row__t"><span>自建服务</span><b>50</b></div><div class="bar"><i style="width:50%"></i></div></div>
+        <div class="skill-row"><div class="skill-row__t"><span>NAS 折腾</span><b>55</b></div><div class="bar"><i style="width:55%"></i></div></div>
+        <div class="skill-row"><div class="skill-row__t"><span>音乐播放器</span><b>40</b></div><div class="bar"><i style="width:40%"></i></div></div>
+      </div>
     </div>
   </section>
 
-  <!-- ================= MARQUEE · 签名动作（文案在 CSS content 中） ================= -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track"><span></span><span></span></div>
-  </div>
-
-  <!-- ================= INTRO · 窄列空场 ================= -->
-  <section class="intro" id="intro">
-    <div class="intro__col">
-      <p class="intro__lead">我的系统面板。</p>
-      <p>按状态、技能、任务、收藏四个模块记录自己，随时看清楚走到了哪里、下一步往哪走。</p>
-      <p>这个站不是简历，是一块系统面板——做过什么、会什么、喜欢什么，都摊在这里。</p>
-      <p>求职北京，行政、人事、文书方向，随时可以聊聊。<a href="mailto:hi@meark.cn">hi@meark.cn</a></p>
+  <!-- ============ 经历 ============ -->
+  <section class="block" id="work">
+    <div class="block__head">
+      <h2>经历</h2>
+      <p class="block__note">做过的、正在做的、计划做的。</p>
     </div>
-  </section>
-
-  <!-- ================= ABOUT · 侧栏事实 + 宽段经历 ================= -->
-  <section class="about" id="about">
-    <div class="about__facts">
-      <dl>
-        <div><dt>所在地</dt><dd>河北 · 唐山</dd></div>
-        <div><dt>经验</dt><dd>前端 1 年</dd></div>
-        <div><dt>状态</dt><dd>求职中 · 北京</dd></div>
-      </dl>
-    </div>
-    <div class="about__body">
-      <p class="about__lead">唐山长大，北方小城，习惯把东西收拾整齐、把话说明白。做过一年前端，从第一个 HTML 页面到能独立交付业务页面与组件。正在转向行政、人事、文书方向，想把会写、会整理用在工作上。</p>
-      <div class="about__records">
-        <div class="record-list">
-          <p class="record-list__tag">做过</p>
-          <ul>
-            <li><span>前端开发</span><span>2024–2025</span></li>
-            <li><span>业务页面交付</span><span>2025</span></li>
-            <li><span>个人站点</span><span>2025</span></li>
-          </ul>
+    <ol class="timeline">
+      <li class="tl-item">
+        <div class="tl-item__y">2024–2025</div>
+        <div class="tl-item__body">
+          <h3>前端开发 · 一年实战</h3>
+          <p>从第一个 HTML 页面到独立交付业务页面与组件，参与官网改版与营销看板。</p>
         </div>
-        <div class="record-list">
-          <p class="record-list__tag">在折腾</p>
-          <ul>
-            <li><span>域名与 DNS</span><span>2025</span></li>
-            <li><span>NAS 自建</span><span>规划中</span></li>
-            <li><span>音乐播放器</span><span>规划中</span></li>
-          </ul>
+      </li>
+      <li class="tl-item">
+        <div class="tl-item__y">2025</div>
+        <div class="tl-item__body">
+          <h3>个人站点 · meark 网站系</h3>
+          <p>域名 meark.cn、GitHub Pages 静态站，正在搭个人网站与子站体系。</p>
         </div>
-      </div>
-    </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-item__y">进行中</div>
+        <div class="tl-item__body">
+          <h3>转行 · 行政 / 人事 / 文书</h3>
+          <p>求职北京，把会写、会整理用在新方向上。</p>
+        </div>
+      </li>
+    </ol>
+    <figure class="block__shot"><img src="assets/img/obj-486.jpg" alt="打字机，写作的工具"></figure>
   </section>
 
-  <!-- ================= SKILLS · 数值三列 ================= -->
-  <section class="skills" id="skills">
-    <h2 class="section-head">技能</h2>
-    <div class="skill-cols">
-      <div class="skill-col">
-        <h3 class="skill-col__title">前端开发</h3>
-        <ul class="skill-col__list">
-          <li><span class="skill-col__name">HTML / CSS</span><span class="skill-col__num">75</span></li>
-          <li><span class="skill-col__name">JavaScript</span><span class="skill-col__num">65</span></li>
-          <li><span class="skill-col__name">Vue / React</span><span class="skill-col__num">55</span></li>
-          <li><span class="skill-col__name">Git 协作</span><span class="skill-col__num">60</span></li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h3 class="skill-col__title">行政 · 人事 · 文书</h3>
-        <ul class="skill-col__list">
-          <li><span class="skill-col__name">公文与写作</span><span class="skill-col__num">45</span></li>
-          <li><span class="skill-col__name">文档整理</span><span class="skill-col__num">70</span></li>
-          <li><span class="skill-col__name">表格与数据</span><span class="skill-col__num">60</span></li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h3 class="skill-col__title">工具与折腾</h3>
-        <ul class="skill-col__list">
-          <li><span class="skill-col__name">自建服务</span><span class="skill-col__num">50</span></li>
-          <li><span class="skill-col__name">NAS 折腾</span><span class="skill-col__num">55</span></li>
-          <li><span class="skill-col__name">音乐播放器</span><span class="skill-col__num">40</span></li>
-        </ul>
-      </div>
+  <!-- ============ 爱好 ============ -->
+  <section class="block" id="hobby">
+    <div class="block__head">
+      <h2>爱好</h2>
+      <p class="block__note">喜欢的东西，慢慢攒。</p>
     </div>
-    <p class="skills__note">熟练度为自评，定期校准。</p>
-  </section>
-
-  <!-- ================= WORK · 大名字索引 + 固定预览 ================= -->
-  <section class="work" id="work">
-    <h2 class="section-head">任务记录</h2>
-    <div class="work__shelf">
-      <div class="work__names" role="list">
-        <a class="work__name" role="listitem" data-img="assets/img/obj-63.jpg" data-disc="前端 · 2025" data-note="公司官网整体改版，负责页面重构与组件拆分。" href="#work"><span>官网重构</span><i>前端 · 2025</i></a>
-        <a class="work__name" role="listitem" data-img="assets/img/img-473.jpg" data-disc="前端 · 2025" data-note="营销活动数据看板，表格与图表的前端实现。" href="#work"><span>营销看板</span><i>前端 · 2025</i></a>
-        <a class="work__name" role="listitem" data-img="assets/img/obj-24.jpg" data-disc="前端 · 2025" data-note="大促活动页，从视觉还原到上线。" href="#work"><span>官网活动页</span><i>前端 · 2025</i></a>
-        <a class="work__name" role="listitem" data-img="assets/img/obj-535.jpg" data-disc="独立 · 2025" data-note="纯静态站点搭建，GitHub Pages 部署。" href="#work"><span>静态站</span><i>独立 · 2025</i></a>
-        <a class="work__name" role="listitem" data-img="assets/img/obj-23.jpg" data-disc="独立 · 2025" data-note="把知识整理成文档站，方便检索与复读。" href="#work"><span>文档站</span><i>独立 · 2025</i></a>
-        <a class="work__name" role="listitem" data-img="assets/img/obj-687.jpg" data-disc="规划中" data-note="统一的视觉设计与组件规范。" href="#work"><span>设计站</span><i>规划中</i></a>
-      </div>
-      <div class="work__preview">
-        <img class="work__shot" src="assets/img/obj-63.jpg" alt="官网重构项目预览（占位图）" loading="lazy">
-        <p class="work__note">公司官网整体改版，负责页面重构与组件拆分。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= GALLERY · 收藏清单 + 精选两图 ================= -->
-  <section class="gallery" id="gallery">
-    <h2 class="section-head">收藏</h2>
-    <ul class="gallery__list">
-      <li><span class="gallery__list-name">咖啡</span><span class="gallery__list-note">唐山 · 每天一杯</span></li>
-      <li><span class="gallery__list-name">海边</span><span class="gallery__list-note">青岛 · 想看一次海</span></li>
-      <li><span class="gallery__list-name">书</span><span class="gallery__list-note">书桌 · 随时翻几页</span></li>
-      <li><span class="gallery__list-name">衬衫</span><span class="gallery__list-note">衣柜 · 要穿得体面</span></li>
-      <li><span class="gallery__list-name">叉子</span><span class="gallery__list-note">厨房 · 认真吃饭</span></li>
-      <li><span class="gallery__list-name">云海</span><span class="gallery__list-note">山顶 · 站在高处看</span></li>
+    <ul class="tags">
+      <li>咖啡</li><li>海边</li><li>打字机</li><li>书</li><li>黄山</li>
     </ul>
-    <div class="gallery__set">
-      <figure class="gallery__item gallery__item--a"><img src="assets/img/obj-486.jpg" alt="打字机，书房，写作的工具" loading="lazy"><figcaption>打字机 · 书房 · 写作的工具</figcaption></figure>
-      <figure class="gallery__item gallery__item--b"><img src="assets/img/img-473.jpg" alt="黄山，安徽，雾海长存" loading="lazy"><figcaption>黄山 · 安徽 · 雾海长存</figcaption></figure>
+    <div class="hobby__shots">
+      <figure class="hobby__shot"><img src="assets/img/img-473.jpg" alt="黄山，安徽，雾海长存"></figure>
+      <figure class="hobby__shot"><img src="assets/img/obj-24.jpg" alt="书，书桌，随时翻几页"></figure>
     </div>
   </section>
 
-  <!-- ================= CONTACT · 邮箱大字 ================= -->
+  <!-- ============ 联系 ============ -->
   <section class="contact" id="contact">
-    <p class="contact__ask">想聊聊工作，或推荐一首歌。</p>
     <a class="contact__mail" href="mailto:hi@meark.cn">hi@meark.cn</a>
+    <p class="contact__ask">想聊聊工作，或推荐一首歌。</p>
   </section>
 
 </main>
@@ -182,7 +127,7 @@
     <span><a href="https://github.com/FuTao0907" target="_blank" rel="noreferrer">GitHub</a></span>
   </div>
   <p class="site-foot__name">MEARK</p>
-  <p class="site-foot__meta">©2025 Meark · 系统面板 v2.0 · 图片为 Unsplash (via picsum) 氛围占位图，上线前可替换</p>
+  <p class="site-foot__meta">©2025 Meark · 系统面板 v2.0</p>
 </footer>
 
 <script src="assets/js/main.js"></script>
