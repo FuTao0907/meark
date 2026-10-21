@@ -1,5 +1,5 @@
-/* Meark · 系统面板 v2.0（v5 设计：A 蓝白面板 + B 简洁克制）
-   面板边框为系统界面特征：lint 豁免注释 + data-ui 标记（inspect 豁免） */
+/* Meark · 人物面板 v3.0（v6 设计：A 蓝白面板 + B 简洁克制）
+   面板边框为人物面板界面特征：lint 豁免注释 + data-ui 标记（inspect 豁免） */
 
 :root {
   --bg: #f4f6f8;
