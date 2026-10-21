@@ -120,6 +120,39 @@
     });
   }
 
+  /* 状态与目标卡入场 */
+  var statusCards = document.querySelectorAll('.status-card');
+  if (statusCards.length && 'IntersectionObserver' in window) {
+    statusCards.forEach(function (c) { c.style.opacity = '0'; c.style.transition = 'opacity 0.45s ease'; });
+    var sIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function () { entry.target.style.opacity = '1'; }, i * 90);
+          sIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    statusCards.forEach(function (c) { sIO.observe(c); });
+  }
+
+  /* 目标条目错落淡入 */
+  var quests = document.querySelectorAll('.quest');
+  if (quests.length && 'IntersectionObserver' in window) {
+    quests.forEach(function (q) { q.style.opacity = '0'; q.style.transform = 'translateX(8px)'; q.style.transition = 'opacity 0.35s ease, transform 0.35s ease'; });
+    var qIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function () {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'none';
+          }, (reduced ? 0 : i) * 70);
+          qIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    quests.forEach(function (q) { qIO.observe(q); });
+  }
+
   /* 爱好两图淡入 */
   var shots = document.querySelectorAll('.hobby__shot');
   if (shots.length && 'IntersectionObserver' in window) {

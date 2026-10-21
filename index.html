@@ -1,67 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meark · 系统面板</title>
-  <meta name="description" content="Meark 的个人系统面板：状态、技能、经历、爱好。">
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEARK · 系统面板</title>
+<meta name="description" content="Meark 的个人信息总览：技能、状态、目标、经历与喜欢的东西。">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="js">
+<body>
+
 <div class="topbar" data-ui>
   <b class="topbar__brand">MEARK · 系统面板</b>
-  <div class="topbar__right"><span class="topbar__ver">v2.0 · 2025</span><span class="badge">求职中 · 北京</span></div>
+  <div class="topbar__right"><span class="topbar__ver">v3.0 · 2025</span><span class="badge">求职中 · 北京</span></div>
 </div>
 
 <main>
 
-  <!-- ============ 角色面板卡 ============ -->
+  <!-- ============ 角色信息卡 ============ -->
   <section class="hero-card" id="top">
     <div class="hero-card__head">
       <div class="hero-card__left">
         <div class="avatar" aria-hidden="true">M</div>
         <div class="who">
           <h1 class="who__name">Meark</h1>
-          <span class="who__lv">Lv.1 · 前端开发</span>
-          <p class="who__status">求职 <b>行政 / 人事 / 文书</b> 方向 · 坐标 河北 · 唐山</p>
+          <span class="who__lv">前端开发 · 一年实战</span>
+          <p class="who__status">正在转行 <b>行政 / 人事 / 文书</b> · 坐标 河北 · 唐山</p>
           <a class="who__btn" href="mailto:hi@meark.cn">联系我</a>
         </div>
       </div>
       <figure class="hero-card__photo"><img src="assets/img/img-338.jpg" alt="海边，想看一次海"></figure>
     </div>
     <dl class="hero-card__stats" data-ui>
-      <div><dt>经验</dt><dd>1<small>年</small></dd></div>
       <div><dt>技能</dt><dd>10<small>项</small></dd></div>
       <div><dt>经历</dt><dd>3<small>段</small></dd></div>
+      <div><dt>目标</dt><dd>4<small>个</small></dd></div>
       <div><dt>坐标</dt><dd>唐山</dd></div>
     </dl>
   </section>
 
-  <!-- ============ 技能 ============ -->
+  <!-- ============ 技能树 ============ -->
   <section class="block" id="skills">
     <div class="block__head">
       <h2>技能</h2>
-      <p class="block__note">熟练度为自评，定期校准。</p>
+      <p class="block__note">熟练度自评：70+ 可独立交付 · 50+ 能配合完成 · 40 以下 正在入门</p>
     </div>
     <div class="skill-groups">
       <div class="skill-group">
         <h3>前端开发</h3>
-        <div class="skill-row"><div class="skill-row__t"><span>HTML / CSS</span><b>75</b></div><div class="bar"><i style="width:75%"></i></div></div>
-        <div class="skill-row"><div class="skill-row__t"><span>JavaScript</span><b>65</b></div><div class="bar"><i style="width:65%"></i></div></div>
-        <div class="skill-row"><div class="skill-row__t"><span>Vue / React</span><b>55</b></div><div class="bar"><i style="width:55%"></i></div></div>
-        <div class="skill-row"><div class="skill-row__t"><span>Git 协作</span><b>60</b></div><div class="bar"><i style="width:60%"></i></div></div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>HTML / CSS</span><b>75</b></div>
+          <div class="bar"><i style="width:75%"></i></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>JavaScript</span><b>65</b></div>
+          <div class="bar"><i style="width:65%"></i></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>Vue / React</span><b>55</b></div>
+          <div class="bar"><i style="width:55%"></i></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>Git 协作</span><b>60</b></div>
+          <div class="bar"><i style="width:60%"></i></div>
+        </div>
       </div>
       <div class="skill-group">
         <h3>行政 · 人事 · 文书</h3>
-        <div class="skill-row"><div class="skill-row__t"><span>公文与写作</span><b>45</b></div><div class="bar"><i style="width:45%"></i></div></div>
-        <div class="skill-row"><div class="skill-row__t"><span>文档整理</span><b>70</b></div><div class="bar"><i style="width:70%"></i></div></div>
-        <div class="skill-row"><div class="skill-row__t"><span>表格与数据</span><b>60</b></div><div class="bar"><i style="width:60%"></i></div></div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>公文与写作</span><b>45</b></div>
+          <div class="bar"><i style="width:45%"></i></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>文档整理</span><b>70</b></div>
+          <div class="bar"><i style="width:70%"></i></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>表格与数据</span><b>60</b></div>
+          <div class="bar"><i style="width:60%"></i></div>
+        </div>
       </div>
       <div class="skill-group">
         <h3>工具与折腾</h3>
-        <div class="skill-row"><div class="skill-row__t"><span>自建服务</span><b>50</b></div><div class="bar"><i style="width:50%"></i></div></div>
-        <div class="skill-row"><div class="skill-row__t"><span>NAS 折腾</span><b>55</b></div><div class="bar"><i style="width:55%"></i></div></div>
-        <div class="skill-row"><div class="skill-row__t"><span>音乐播放器</span><b>40</b></div><div class="bar"><i style="width:40%"></i></div></div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>自建服务</span><b>50</b></div>
+          <div class="bar"><i style="width:50%"></i></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>NAS 折腾</span><b>55</b></div>
+          <div class="bar"><i style="width:55%"></i></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row__t"><span>音乐播放器</span><b>40</b></div>
+          <div class="bar"><i style="width:40%"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 状态与目标 ============ -->
+  <section class="block" id="status">
+    <div class="block__head">
+      <h2>状态与目标</h2>
+      <p class="block__note">主线、支线，慢慢推进。</p>
+    </div>
+    <div class="status-grid">
+      <div class="status-card">
+        <h3>当前状态</h3>
+        <ul class="status-list">
+          <li><span class="status-list__k">求职中</span><span class="status-list__v">行政 / 人事 / 文书 · 北京</span></li>
+          <li><span class="status-list__k">进行中</span><span class="status-list__v">meark 网站系</span></li>
+          <li><span class="status-list__k">坐标</span><span class="status-list__v">河北 · 唐山</span></li>
+        </ul>
+      </div>
+      <div class="status-card">
+        <h3>目标</h3>
+        <ul class="quest-list">
+          <li class="quest quest--main"><span class="quest__name">主线 · 转行 行政 / 人事 / 文书</span><span class="quest__tag">进行中</span></li>
+          <li class="quest"><span class="quest__name">支线 · meark 网站系</span><span class="quest__tag">进行中</span></li>
+          <li class="quest"><span class="quest__name">支线 · NAS 自建</span><span class="quest__tag quest__tag--idle">计划中</span></li>
+          <li class="quest"><span class="quest__name">支线 · 音乐站 audio</span><span class="quest__tag quest__tag--idle">计划中</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -77,14 +135,14 @@
         <div class="tl-item__y">2024–2025</div>
         <div class="tl-item__body">
           <h3>前端开发 · 一年实战</h3>
-          <p>从第一个 HTML 页面到独立交付业务页面与组件，参与官网改版与营销看板。</p>
+          <p>从第一个 HTML 页面到独立交付业务页面与组件，一路自己折腾过来。</p>
         </div>
       </li>
       <li class="tl-item">
         <div class="tl-item__y">2025</div>
         <div class="tl-item__body">
           <h3>个人站点 · meark 网站系</h3>
-          <p>域名 meark.cn、GitHub Pages 静态站，正在搭个人网站与子站体系。</p>
+          <p>域名 meark.cn，GitHub Pages 静态站，从 v1 一路改到 v3，现在开始认真把它做成自己的东西。</p>
         </div>
       </li>
       <li class="tl-item">
@@ -98,18 +156,24 @@
     <figure class="block__shot"><img src="assets/img/obj-486.jpg" alt="打字机，写作的工具"></figure>
   </section>
 
-  <!-- ============ 爱好 ============ -->
+  <!-- ============ 喜欢 ============ -->
   <section class="block" id="hobby">
     <div class="block__head">
-      <h2>爱好</h2>
-      <p class="block__note">喜欢的东西，慢慢攒。</p>
+      <h2>喜欢</h2>
+      <p class="block__note">攒起来的东西，也是我的一部分。</p>
     </div>
     <ul class="tags">
       <li>咖啡</li><li>海边</li><li>打字机</li><li>书</li><li>黄山</li>
     </ul>
     <div class="hobby__shots">
-      <figure class="hobby__shot"><img src="assets/img/img-473.jpg" alt="黄山，安徽，雾海长存"></figure>
-      <figure class="hobby__shot"><img src="assets/img/obj-24.jpg" alt="书，书桌，随时翻几页"></figure>
+      <figure class="hobby__shot">
+        <img src="assets/img/img-473.jpg" alt="黄山，雾海长存">
+        <figcaption>黄山 · 雾海长存</figcaption>
+      </figure>
+      <figure class="hobby__shot">
+        <img src="assets/img/obj-24.jpg" alt="书，书桌，随时翻几页">
+        <figcaption>书 · 随时翻几页</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -124,10 +188,10 @@
 <footer class="site-foot">
   <div class="site-foot__info">
     <span>唐山 · 北京（求职中）</span>
-    <span><a href="https://github.com/FuTao0907" target="_blank" rel="noreferrer">GitHub</a></span>
+    <a href="https://github.com/FuTao0907" target="_blank" rel="noopener">GitHub</a>
   </div>
-  <p class="site-foot__name">MEARK</p>
-  <p class="site-foot__meta">©2025 Meark · 系统面板 v2.0</p>
+  <div class="site-foot__name">MEARK</div>
+  <div class="site-foot__meta">©2025 Meark · 系统面板 v3.0</div>
 </footer>
 
 <script src="assets/js/main.js"></script>

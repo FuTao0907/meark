@@ -203,6 +203,60 @@ main { max-width: 980px; margin: 0 auto; padding: 0 var(--margin) 40px; }
 }
 .block__shot img { width: 100%; height: 100%; object-fit: cover; }
 
+/* 状态与目标 */
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.status-card {
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  padding: 24px 26px;
+}
+.status-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 18px; }
+.status-list { list-style: none; }
+.status-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+.status-list li:last-child { margin-bottom: 0; }
+.status-list__k {
+  flex: none;
+  width: 64px;
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.status-list__v { color: var(--ink); }
+
+.quest-list { list-style: none; }
+.quest {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+  font-size: 16px;
+}
+.quest__name { color: var(--ink); }
+.quest--main .quest__name { font-weight: 700; }
+.quest__tag {
+  flex: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 12px;
+  border-radius: 999px;
+}
+.quest__tag--idle { background: #eef1f4; color: var(--muted); }
+
 /* 爱好 */
 
 .tags {
@@ -231,8 +285,19 @@ main { max-width: 980px; margin: 0 auto; padding: 0 var(--margin) 40px; }
   border-radius: 14px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
+  position: relative;
 }
 .hobby__shot img { width: 100%; height: 100%; object-fit: cover; }
+.hobby__shot figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 26px 18px 12px;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(20, 30, 44, 0.72);
+}
 
 /* ============ 联系 ============ */
 
