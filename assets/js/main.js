@@ -6,20 +6,22 @@
 
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* 进度条生长（隐藏 → IO 触发 → 填满） */
+  /* 进度条生长（隐藏 → IO 触发 → 填满）
+     注意：目标宽度必须在置 0 之前先收集，否则读到的永远是 0% */
   var bars = document.querySelectorAll('.bar i');
-  function setWidths(w) {
-    bars.forEach(function (b) { b.style.width = w; });
-  }
+  var barTargets = [];
+  bars.forEach(function (b) {
+    var m = b.getAttribute('style') && b.getAttribute('style').match(/width:\s*(\d+%)/);
+    barTargets.push(m ? m[1] : '60%');
+    b.style.width = '0%';
+    b.style.transition = reduced ? 'width 0.2s ease' : 'width 0.8s cubic-bezier(0.2, 0.7, 0.3, 1)';
+  });
   if (bars.length && 'IntersectionObserver' in window) {
-    setWidths('0%');
-    bars.forEach(function (b) {
-      b.style.transition = reduced ? 'width 0.2s ease' : 'width 0.8s cubic-bezier(0.2, 0.7, 0.3, 1)';
-    });
     var barIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.style.width = entry.target.dataset.w || entry.target.getAttribute('style').match(/width:(\d+%)/)[1];
+        var idx = Array.prototype.indexOf.call(bars, entry.target);
+        if (entry.isIntersecting && idx > -1) {
+          entry.target.style.width = barTargets[idx];
           barIO.unobserve(entry.target);
         }
       });

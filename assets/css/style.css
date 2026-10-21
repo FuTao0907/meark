@@ -202,7 +202,7 @@ main { max-width: 980px; margin: 0 auto; padding: 0 var(--margin) 40px; }
 
 .status-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 .status-card {
@@ -355,6 +355,7 @@ main { max-width: 980px; margin: 0 auto; padding: 0 var(--margin) 40px; }
   .block { padding: 44px 0 4px; }
   .block__head { flex-direction: column; align-items: flex-start; gap: 4px; }
   .skill-groups { grid-template-columns: 1fr; }
+  .status-grid { grid-template-columns: 1fr; }
   .tl-item { grid-template-columns: 1fr; gap: 4px; }
   .block__shot { aspect-ratio: 4 / 3; }
   .hobby__shots { grid-template-columns: 1fr; }
