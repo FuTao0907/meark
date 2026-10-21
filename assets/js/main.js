@@ -10,9 +10,9 @@
 
   /* ---------- 入场 reveal / wipe（style 直写） ---------- */
   var revealTargets = document.querySelectorAll(
-    '.intro__col, .about__facts, .about__body, .skill-col, .work__name, .work__preview, .contact__ask, .contact__mail, .site-foot'
+    '.rail-main__panel, .intro__col, .about__facts, .about__body, .skill-col, .work__name, .work__preview, .contact__ask, .contact__mail, .site-foot'
   );
-  var wipeTargets = document.querySelectorAll('.rail-left, .rail-main, .rail-side, .gallery__item');
+  var wipeTargets = document.querySelectorAll('.rail-left, .rail-side, .gallery__item');
 
   function hideReveal(el) {
     el.style.opacity = '0';
@@ -50,7 +50,7 @@
   }
 
   /* ---------- hero 轻量视差（滚动时直写 style，保证动效可测） ---------- */
-  var driftEl = document.querySelector('.rail-main img');
+  var driftEl = document.querySelector('.rail-left img');
   if (driftEl && 'IntersectionObserver' in window) {
     var ticking = false;
     var apply = function () {
